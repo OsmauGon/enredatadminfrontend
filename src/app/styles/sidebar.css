@@ -1,0 +1,13 @@
+
+.sidebar-links{
+  background-color: lightcoral;
+    margin: 20px 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.sidebar-links a{
+    color: white;
+    padding-bottom: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}

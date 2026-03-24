@@ -1,0 +1,38 @@
+.mock-container button{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    font-size: 36px;
+    cursor: pointer;
+}
+.mock-container img{
+    width: 100%;
+}
+.mock-container{
+    color: white;
+    font-size: 24px;
+    width: 500px;
+    height: 500px;
+    overflow: auto;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(0,0,0,.9);
+    position: fixed;
+    top: 10px;
+    border-radius: 10px;
+    top: 10px;
+    left: 50%;
+}
+.mock-container::-webkit-scrollbar{
+    background-color: transparent;
+
+}
+
+.data-item{}
+.data-item b{
+    color: red;
+    font-size: 24px;
+    margin-right: 10px;
+}

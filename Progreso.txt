@@ -1,0 +1,39 @@
+DIA 1(19/3)
+Decidi empezar de cero el proyecto de EnredatAdminPage (el frontend dedicado a que un administrador pueda gestionar los usuarios, eventos y casos del proyecto Enredat) poruqe perdi el control de lo que estaba construyendo. Chat GPT estructuraba y programaba usando Next de manera que unificaba el front-end y el back-end en en una sola carpeta.
+Vamos a empezar de cero pero respetando pasos
+
+Paso 1: Creación 
+Ejecutamos npx-create-next-app@latest nombreDELproyecto. Inmediatamente nos pregunta si queremos hacer la configuración recomendada de Next o customizada, a lo que elegimos customizar. 
+ Would you like to use the recommended Next.js defaults? » No, customize settings
+√ Would you like to use TypeScript? ... No / Yes (elegimos YES)
+√ Which linter would you like to use? » ESLint (elegimos YES)
+√ Would you like to use React Compiler? ... No / Yes (elegimos NO)
+√ Would you like to use Tailwind CSS? ... No / Yes (elegimos YES)
+√ Would you like your code inside a `src/` directory? ... No / Yes (elegimos YES)
+√ Would you like to use App Router? (recommended) ... No / Yes (elegimos YES)
+√ Would you like to customize the import alias (`@/*` by default)? ... No / Yes (elegimos NO)
+√ Would you like to include AGENTS.md to guide coding agents to write up-to-date Next.js code? ... No / Yes (elegimos NO)
+De esta manera sabemos que estamos creado y con que configuracion
+
+Next en un framework sobre React que da estructura, backend integrado, routing automatico y optimizacion lista. En otras palabras React solo en una libreria y Next es el entorno completo para construir apps reales
+Con Next ya renemos integrado el routing (react-router-dom), el fetch de datos y otros. La estructura de Next se basa en carpetas, entonces por ejemplo cada ruta (loginPage, dashboardPage) esta dentro de su propia carpeta: login/page.tsx y dashboard/page.tsx
+
+Paso 2: Primeros archivos (para el dia de la fecha haremos un login minimo y funcional)
+Una vez todo el proceso de creacion completado tendremos la carpeta del proyecto y una de sus carpetas es SRC y dentro APP y dejar creadas las carpetas LOGIN y DASHBOARD, cada una con un archivo page.tsx
+
+ambos page.tsx deben empezar con "use client" y sus funciones de componente se exportar si o si de la siguiente manera: 
+export default function nombreDEfuncion (){}
+
+ya podemos ejecutar npm run dev para levantar el servidor y debemos ir en el navegador a localhost:3000/login y probar loguearnos
+
+DIA 2(20/3)
+Para empezar vamos a crear el componente que sera visible para el administrador una vez que este correctamente loguedo: AdminLayout, para lo que crearemos la carpeta (ADMIN) (si, entre parentesis) y dentro dentr el archivo layout.tsx quedando la estructura de la siguiente manera: src/app/(admin)/layout.tsx
+Ayer dejamos creado LoginPage y DashboardPage. Debemos modificar la estructura: vamos dejar LoginPage y la carpeta DASHBOARD la pegaremos dentro de (ADMIN), de esta menera el unico contenido que muestra este proyecto sera lo que haya en LoginPage y lo que haya en AdminLayout (el aside para nevegar y el main para las paginas de usuarios, eventos y otros)
+Creamos el componente AuthGuard que recibe al visitante y verifica el localstorage para ver si esta logueado o no antes de mostrar /dashboard. Si no esta logueado redirige a /login
+
+DIA 3(21)
+Agregamos contenido a UsersPage, CasosPage, EventsPage y a InfoPage, para este ultimo simulamos una lista de infoUtiles en el archivo infoMock
+
+DIA 4(23/3) Improvisamos un pagina de bienvenida para dashboardpage mostrando la cantidad de elementos habilitados, en espeta y rechazados de cada insiso de la base de datos (users, cases, events y info). Subimos a github exitosamente, pero hay problemas con el despliegue en vercel
+
+DIA 5(24/3)
