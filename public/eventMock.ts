@@ -1,4 +1,4 @@
-import type { mockobjectevent } from "../src/app/features/dashboard/EventPage";
+import { mockobjectevent } from "@/app/(admin)/events/page"
 
 export const simulatedEvents: mockobjectevent[] = [
     {

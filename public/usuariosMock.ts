@@ -1,4 +1,4 @@
-import type { mockobjectuser } from "../src/app/features/dashboard/UsuariosPage";
+import { mockobjectuser } from "@/app/types/mocktypes"
 
 export const usuarios: mockobjectuser[] = [
     {
